@@ -1,5 +1,6 @@
 from django.apps import AppConfig
 from django.db.utils import IntegrityError
+from django.conf import settings
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
 import redis
@@ -7,7 +8,7 @@ import pickle
 
 class BotConfig(AppConfig):
 	name = 'bot'
-	r = redis.Redis()
+	r = redis.Redis(host=settings.REDIS_URL)
 	cache = dict()
 	ADDRESS, PHOTO, LOCATION = range(3)
 
