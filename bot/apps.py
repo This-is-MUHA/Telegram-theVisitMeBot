@@ -66,7 +66,7 @@ class BotConfig(AppConfig):
 
 	@staticmethod
 	def main():
-		token = "1106138413:AAGQRknL_iQf-wCo9WWMwagqnFLExz9cFT4"
+		token = settings.TOKEN
 		updater = Updater(token, use_context=True)
 
 		dp = updater.dispatcher

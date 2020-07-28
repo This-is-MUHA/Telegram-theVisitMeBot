@@ -121,4 +121,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 REDIS_URL = os.getenv("REDIS_URL", "redis://127.0.0.1:6379/2")
+TOKEN = os.getenv("TOKEN")
 django_heroku.settings(locals())
