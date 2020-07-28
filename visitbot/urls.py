@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from bot.views import startbot
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('startbot/', startbot),
 ]
