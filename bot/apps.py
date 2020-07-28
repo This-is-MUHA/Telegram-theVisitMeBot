@@ -8,7 +8,7 @@ import pickle
 
 class BotConfig(AppConfig):
 	name = 'bot'
-	r = redis.Redis(host=settings.REDIS_URL)
+	r = redis.from_url(settings.REDIS_URL)
 	cache = dict()
 	ADDRESS, PHOTO, LOCATION = range(3)
 
