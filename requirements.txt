@@ -1,4 +1,4 @@
-django==3.0.3
+django==3.1.6
 django_heroku==0.3.1
 redis==3.5.3
 python-telegram-bot==12.8
